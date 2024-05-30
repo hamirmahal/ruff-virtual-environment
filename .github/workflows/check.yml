@@ -1,4 +1,4 @@
-name: Ruff
+name: Check
 on: [push]
 jobs:
   formatting:
@@ -13,3 +13,9 @@ jobs:
       - uses: actions/checkout@v4
       - run: pip install ruff
       - run: ruff check .
+  typing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install mypy
+      - run: mypy --strict .
