@@ -1,0 +1,8 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Virtual Environments
+venv/
+
+# mypy
+.mypy_cache/

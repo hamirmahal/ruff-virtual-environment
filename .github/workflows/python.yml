@@ -1,0 +1,13 @@
+name: python
+on: [push]
+jobs:
+  m_unittest_src_utils:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m unittest src.utils.print_with_time
+  src:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python src/main.py
