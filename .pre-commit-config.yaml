@@ -15,6 +15,11 @@ repos:
 
   - repo: local
     hooks:
+      - id: doctest       # required for this pre-commit hook
+        name: doctest     # required for this pre-commit hook
+        language: system  # required for this pre-commit hook
+        entry: python -m doctest
+
       - id: pylint        # required for this pre-commit hook
         name: pylint      # required for this pre-commit hook
         entry: pylint     # required for this pre-commit hook

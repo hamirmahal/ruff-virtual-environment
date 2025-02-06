@@ -11,6 +11,8 @@ from unittest.mock import patch
 def print_with_time(*args: Any, **kwargs: Any) -> None:
     """
     Print the given information with the current time in HH:MM:SS format.
+    >>> print_with_time("Hello.") #doctest: +ELLIPSIS
+    [...] Hello.
     """
     current_time = datetime.datetime.now().strftime("%H:%M:%S")
     print(f"[{current_time}]", *args, **kwargs)

@@ -16,19 +16,30 @@ VARIABLE_9 = (1, 2, 3)
 VARIABLE_11 = range(10)
 VARIABLE_12 = print
 
-print_with_time("Hello.")
-print_with_time(
-    "You can print variables like",
-    VARIABLE_1,
-    VARIABLE_2,
-    VARIABLE_3,
-    VARIABLE_4,
-    VARIABLE_5,
-    VARIABLE_6,
-    VARIABLE_7,
-    VARIABLE_8,
-    VARIABLE_9,
-    VARIABLE_11,
-    "and",
-    VARIABLE_12,
-)
+
+def main() -> None:
+    """
+    >>> main() #doctest: +ELLIPSIS
+    [...] Hello.
+    [...] You can print variables like {'a': 1, 'b': 2, 'c': 3} 123 3.14 string True False {1, 2...
+    """
+    print_with_time("Hello.")
+    print_with_time(
+        "You can print variables like",
+        VARIABLE_1,
+        VARIABLE_2,
+        VARIABLE_3,
+        VARIABLE_4,
+        VARIABLE_5,
+        VARIABLE_6,
+        VARIABLE_7,
+        VARIABLE_8,
+        VARIABLE_9,
+        VARIABLE_11,
+        "and",
+        VARIABLE_12,
+    )
+
+
+if __name__ == "__main__":
+    main()

@@ -1,11 +1,13 @@
 name: python
 on: [push]
 jobs:
-  m_unittest_src_utils:
+  doctest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python -m unittest src.utils.print_with_time
+      - run: |
+          ALL_PYTHON_FILES_IN_SRC=$(find src -name "*.py")
+          echo "$ALL_PYTHON_FILES_IN_SRC" | xargs -I {} python -m doctest {} # Run doc tests on all python files
   src:
     runs-on: ubuntu-latest
     steps:
