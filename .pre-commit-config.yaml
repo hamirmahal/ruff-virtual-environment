@@ -17,6 +17,7 @@ repos:
     hooks:
       - id: doctest       # required for this pre-commit hook
         name: doctest     # required for this pre-commit hook
+        types: [python]   # required for this pre-commit hook if committing binary files like PDFs
         language: system  # required for this pre-commit hook
         entry: python -m doctest
 
