@@ -20,3 +20,9 @@ repos:
         entry: pylint     # required for this pre-commit hook
         types: [python]   # required for this pre-commit hook
         language: system  # required for this pre-commit hook
+
+      - id: unittest          # required for this pre-commit hook
+        name: unittest        # required for this pre-commit hook
+        language: system      # required for this pre-commit hook
+        pass_filenames: false # required for this pre-commit hook
+        entry: python -m unittest discover -s src/ -p "*.py"
