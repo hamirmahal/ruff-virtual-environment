@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           ALL_PYTHON_FILES_IN_SRC=$(find src -name "*.py")
-          echo "$ALL_PYTHON_FILES_IN_SRC" | xargs -I {} python -m doctest {} # Run doc tests on all python files
+          echo "$ALL_PYTHON_FILES_IN_SRC" | xargs -I {} python -m doctest -v {} # Run doc tests on all python files
   src:
     runs-on: ubuntu-latest
     steps:
