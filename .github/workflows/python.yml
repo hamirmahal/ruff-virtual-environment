@@ -13,3 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python src/main.py
+  unittest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m unittest discover -s src/ -p "*.py"
