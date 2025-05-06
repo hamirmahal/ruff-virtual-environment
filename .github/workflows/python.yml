@@ -1,6 +1,8 @@
 on: [push]
 
 name: python
+permissions:
+  contents: read
 jobs:
   doctest:
     runs-on: ubuntu-latest

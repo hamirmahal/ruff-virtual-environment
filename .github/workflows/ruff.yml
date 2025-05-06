@@ -1,6 +1,8 @@
 on: [push]
 
 name: ruff
+permissions:
+  contents: read
 jobs:
   check:
     runs-on: ubuntu-latest

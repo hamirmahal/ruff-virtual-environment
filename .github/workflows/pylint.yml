@@ -4,6 +4,8 @@ name: pylint
 jobs:
   src:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - run: pip install pylint
