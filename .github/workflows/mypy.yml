@@ -1,5 +1,6 @@
-name: mypy
 on: [push]
+
+name: mypy
 jobs:
   strict:
     runs-on: ubuntu-latest

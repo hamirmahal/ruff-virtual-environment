@@ -1,5 +1,6 @@
-name: ruff
 on: [push]
+
+name: ruff
 jobs:
   check:
     runs-on: ubuntu-latest

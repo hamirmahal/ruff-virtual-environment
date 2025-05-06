@@ -1,5 +1,6 @@
-name: python
 on: [push]
+
+name: python
 jobs:
   doctest:
     runs-on: ubuntu-latest

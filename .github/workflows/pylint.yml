@@ -1,5 +1,6 @@
-name: pylint
 on: [push]
+
+name: pylint
 jobs:
   src:
     runs-on: ubuntu-latest
