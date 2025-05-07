@@ -1,38 +1,41 @@
+# https://pre-commit.com/#repository-local-hooks
+# A local hook must define id, name, language, entry, and files / types
+
 repos:
   - repo: local
     hooks:
-      - id: doctest # required for this pre-commit hook
-        name: doctest # required for this pre-commit hook
-        types: [python] # required for this pre-commit hook if committing binary files like PDFs
-        language: system # required for this pre-commit hook
+      - id: doctest
+        name: doctest
+        types: [python]
+        language: system
         entry: python -m doctest
 
-      - id: pylint # required for this pre-commit hook
-        name: pylint # required for this pre-commit hook
-        entry: pylint # required for this pre-commit hook
-        types: [python] # required for this pre-commit hook
-        language: system # required for this pre-commit hook
+      - id: pylint
+        name: pylint
+        entry: pylint
+        types: [python]
+        language: system
 
-      - id: pyright # required for this pre-commit hook
-        name: pyright # required for this pre-commit hook
-        entry: pyright # required for this pre-commit hook
-        types: [python] # required for this pre-commit hook
-        language: system # required for this pre-commit hook
+      - id: pyright
+        name: pyright
+        entry: pyright
+        types: [python]
+        language: system
 
-      - id: ruff # required for this pre-commit hook
-        name: ruff # required for this pre-commit hook
-        types: [python] # required for this pre-commit hook
-        language: system # required for this pre-commit hook
-        entry: ruff check # required for this pre-commit hook
+      - id: ruff
+        name: ruff
+        types: [python]
+        language: system
+        entry: ruff check
 
-      - id: ruff-format # required for this pre-commit hook
-        types: [python] # required for this pre-commit hook
-        language: system # required for this pre-commit hook
-        name: ruff-format # required for this pre-commit hook
-        entry: ruff format # required for this pre-commit hook
+      - id: ruff-format
+        types: [python]
+        language: system
+        name: ruff
+        entry: ruff format
 
-      - id: unittest # required for this pre-commit hook
-        name: unittest # required for this pre-commit hook
-        language: system # required for this pre-commit hook
+      - id: unittest
+        name: unittest
+        language: system
         pass_filenames: false # required for this pre-commit hook
         entry: python -m unittest discover -s src/ -p "*.py"
