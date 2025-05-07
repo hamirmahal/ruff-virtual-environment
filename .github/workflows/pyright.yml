@@ -1,6 +1,6 @@
 on: [push]
 
-name: mypy
+name: pyright
 jobs:
   strict:
     runs-on: ubuntu-latest
@@ -8,5 +8,5 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
-      - run: pip install mypy
-      - run: mypy --strict .
+      - run: pip install pyright
+      - run: pyright

@@ -1,12 +1,4 @@
 repos:
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.10.0
-    hooks:
-      - id: mypy
-        args: [--strict]
-        additional_dependencies: [types-all]
-        exclude: ^testing/resources/
-
   - repo: local
     hooks:
       - id: doctest # required for this pre-commit hook
@@ -18,6 +10,12 @@ repos:
       - id: pylint # required for this pre-commit hook
         name: pylint # required for this pre-commit hook
         entry: pylint # required for this pre-commit hook
+        types: [python] # required for this pre-commit hook
+        language: system # required for this pre-commit hook
+
+      - id: pyright # required for this pre-commit hook
+        name: pyright # required for this pre-commit hook
+        entry: pyright # required for this pre-commit hook
         types: [python] # required for this pre-commit hook
         language: system # required for this pre-commit hook
 
