@@ -14,7 +14,6 @@ isort==5.13.2
 kiwisolver==1.4.8
 matplotlib==3.10.0
 mccabe==0.7.0
-mypy-extensions==1.0.0
 networkx==3.4.2
 nodeenv==1.8.0
 numpy==2.2.3

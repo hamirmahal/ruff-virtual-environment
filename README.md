@@ -28,7 +28,7 @@ pip list
 pip list
 pip install ruff
 pip list
-pip install mypy
+pip install pyright
 pip list
 pip install pre-commit
 pip list
