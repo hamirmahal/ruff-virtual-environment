@@ -15,36 +15,32 @@ source venv/bin/activate
 ## To install the packages in [`requirements.txt`](requirements.txt)
 
 ```
-pip list
 pip install -r requirements.txt
-pip list
+```
+
+## To install the `pre-commit` hooks
+
+```
 pre-commit install
-pip list
 ```
 
 ## To install the latest packages
 
 ```
-pip list
 pip install ruff
-pip list
-pip install pyright
-pip list
-pip install pre-commit
-pip list
 pip install pylint
-pip list
+pip install pyright
+pip install pre-commit
 
-# "Freeze" the requirements so we know what versions we are using.
-pip freeze > requirements.txt && pip list
+pip freeze >requirements.txt # Lock dependency versions.
 ```
 
-# Running the Program
+# To Run the Program
 
 You can run the program with
 
 ```
-time python src/main.py
+python src/main.py
 ```
 
 in your terminal after completing setup.
