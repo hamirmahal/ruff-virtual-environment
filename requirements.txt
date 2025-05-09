@@ -35,4 +35,4 @@ tomlkit==0.13.2
 types-requests==2.32.0.20241016
 typing_extensions==4.11.0
 urllib3==2.3.0
-virtualenv==20.26.1
+virtualenv==20.26.6
